@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出席番号ランダム抽選ルーレット</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>出席番号ランダム抽選ルーレット</h1>
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">開始</button>
+                <button id="resetBtn" class="btn btn-secondary">リセット</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="roulette-section">
+                <div class="roulette-container">
+                    <canvas id="rouletteCanvas" width="400" height="400"></canvas>
+                    <div class="pointer"></div>
+                </div>
+                <div id="result" class="result-display">
+                    <div id="resultText"></div>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <div class="panel-header">
+                    <h3>項目管理</h3>
+                    <button id="addItemBtn" class="btn btn-small">+ 追加</button>
+                </div>
+                <div class="items-list" id="itemsList">
+                    <!-- 項目がここに動的に追加されます -->
+                </div>
+                <div class="shortcuts">
+                    <h4>ショートカット</h4>
+                    <div class="shortcuts-list">
+                        <div class="shortcut-item">
+                            <span class="key">SPACE</span>
+                            <span class="description">それをスピン</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="key">R</span>
+                            <span class="description">リセット</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="key">E</span>
+                            <span class="description">編集</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
